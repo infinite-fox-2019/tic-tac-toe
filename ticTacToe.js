@@ -46,7 +46,7 @@ function tic() {
                 return 'seri'
             }
         }
-    return output
+    // return output
 }
 function posisiRandom() {
     i = Math.floor(Math.random()*3)
@@ -84,7 +84,7 @@ function cekPemenang(output) {
     if (output[0][0] == 'x' && output[1][1] == 'x' && output[2][2] == 'x') return 'X menang'
     if (output[0][2] == 'x' && output[1][1] == 'x' && output[2][0] == 'x') return 'X menang'
     if (output[0][0] == 'o' && output[1][1] == 'o' && output[2][2] == 'o') return 'O menang'
-    if (output[0][2] == 'x' && output[1][1] == 'x' && output[2][0] == 'o') return 'O menang'
+    if (output[0][2] == 'o' && output[1][1] == 'o' && output[2][0] == 'o') return 'O menang'
     return ''
 }
 function printBoard(arr) {
