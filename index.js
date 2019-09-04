@@ -34,13 +34,11 @@ function checkWinner (ticTacToeArr) {
     for (let i = 0; i < 3; i++) {
         if(ticTacToeArr[i][0] === ticTacToeArr[i][1] && ticTacToeArr[i][1] == ticTacToeArr[i][2] && ticTacToeArr[i][0] != ' ') {
             return `${ticTacToeArr[i][0]} is The Winner!`            
-        }
-        if(ticTacToeArr[0][i] === ticTacToeArr[1][i] && ticTacToeArr[1][i] == ticTacToeArr[2][i] && ticTacToeArr[0][i] != ' ') {
+        } else if(ticTacToeArr[0][i] === ticTacToeArr[1][i] && ticTacToeArr[1][i] == ticTacToeArr[2][i] && ticTacToeArr[0][i] != ' ') {
             return `${ticTacToeArr[0][i]} is The Winner!`            
-        }
-        if(ticTacToeArr[0][0] === ticTacToeArr[1][1] && ticTacToeArr[1][1] == ticTacToeArr[2][2] && ticTacToeArr[0][0] != ' ') {
+        } else if(ticTacToeArr[0][0] === ticTacToeArr[1][1] && ticTacToeArr[1][1] == ticTacToeArr[2][2] && ticTacToeArr[0][0] != ' ') {
             return `${ticTacToeArr[0][0]} is The Winner!`            
-        }if(ticTacToeArr[0][2] === ticTacToeArr[1][1] && ticTacToeArr[1][1] == ticTacToeArr[2][0] && ticTacToeArr[0][2] != ' ') {
+        } else if(ticTacToeArr[0][2] === ticTacToeArr[1][1] && ticTacToeArr[1][1] == ticTacToeArr[2][0] && ticTacToeArr[0][2] != ' ') {
             return `${ticTacToeArr[0][2]} is The Winner!`            
         }
     }
