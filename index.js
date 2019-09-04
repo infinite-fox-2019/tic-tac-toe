@@ -9,7 +9,7 @@ function generateTicTacToe() {
         ['', '', ''],
         ['', '', ''],
     ];
-    let turnO = Math.floor(Math.random() * Math.floor(2)) === 0;
+    let turnO = getRandomNumber(2) === 0;
     let currentPlayer = '';
     for(let i = 0; i < 9; i++) {
         if(turnO) {
@@ -17,7 +17,7 @@ function generateTicTacToe() {
         } else {
             currentPlayer = 'X';
         }
-        let randomXYIndex = Math.floor(Math.random() * Math.floor(xy.length));
+        let randomXYIndex = getRandomNumber(xy.length);
         board[xy[randomXYIndex][0]][xy[randomXYIndex][1]] = currentPlayer;
         xy.splice(randomXYIndex, 1);
 
@@ -31,6 +31,10 @@ function generateTicTacToe() {
     }
 
     return board;
+}
+
+function getRandomNumber(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
 
 function playerWins(player, board) {
