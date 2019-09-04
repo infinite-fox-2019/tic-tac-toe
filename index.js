@@ -18,7 +18,7 @@ function ticTacToe(){
     return arrOut;
 }
 
-console.log(ticTacToe())
+// console.log(ticTacToe())
 
 //RELEASE 1
 function ticTac(){
@@ -44,12 +44,12 @@ function ticTac(){
         if (arr[x][y] === ' ') arr[x][y] = insert;
         else i--
         if (checkWinner(arr) === 'X'){
-            console.log(arr);
-            return 'X win!';
+            console.log(arr[0]+'\n'+arr[1]+'\n'+arr[2]);
+            return '\n X win!';
         }
         else if (checkWinner(arr) === 'O'){
-            console.log(arr);
-            return 'O win!';
+            console.log(arr[0]+'\n'+arr[1]+'\n'+arr[2]);
+            return '\n O win!';
         }
     }
     return ticTac();
@@ -57,8 +57,8 @@ function ticTac(){
 
 function checkWinner(arr){
     for (let i=0; i<3; i++){
-        if (arr[i][0] === 'X' && arr[0][1] === 'X' && arr[0][2] == 'X') return 'X'
-        else if (arr[i][0] === 'O' && arr[0][1] === 'O' && arr[0][2] == 'O') return 'O'
+        if (arr[i][0] === 'X' && arr[i][1] === 'X' && arr[i][2] == 'X') return 'X'
+        else if (arr[i][0] === 'O' && arr[i][1] === 'O' && arr[i][2] == 'O') return 'O'
     }
     for (let i=0; i<3; i++){
         if (arr[0][i] === 'X' && arr[1][i] === 'X' && arr[2][i] == 'X') return 'X'
