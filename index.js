@@ -31,6 +31,6 @@ const ticTacToe = row => {
   return grid
 }
 
-// console.log(ticTacToe(3))
+console.log(ticTacToe(3))
 console.log(ticTacToe(5))
-// console.log(ticTacToe(7))
+console.log(ticTacToe(7))
