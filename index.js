@@ -13,12 +13,20 @@ function ticTacToe (num) {
         let temp = [];
         for (let j = 0; j < num; j++) {
             let hufurNow = XO[Math.floor(Math.random() * XO.length)]; 
-            if (hufurNow === 'O' && counterO <= banyak) {
+            if (hufurNow === 'O' && counterO < banyak) {
                 temp.push('O');
                 counterO++
             } 
-            if (hufurNow === 'X' && counterX <= banyak) {
+            else if (hufurNow === 'O' && counterO >= banyak) {
                 temp.push('X');
+                counterO++
+            } 
+            else if (hufurNow === 'X' && counterX < banyak) {
+                temp.push('X');
+                counterX++
+            }
+            else if (hufurNow === 'X' && counterX >= banyak) {
+                temp.push('O');
                 counterX++
             }       
         }
@@ -28,4 +36,4 @@ function ticTacToe (num) {
     return result;
 };
 
-console.log(ticTacToe(11));
+console.log(ticTacToe(3));
