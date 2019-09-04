@@ -18,11 +18,11 @@ const ticTacToe = row => {
     while (grid[i].length < row) {
       const random = Math.floor(Math.random() * 2)
       const pick = choices[random]
-      if (pick == 'X' && teamX < 5) {
+      if (pick == 'X' && teamX < Math.ceil((row * row)) / 2) {
         teamX++
         grid[i].push(pick)
       }
-      if (pick == 'O' && teamO < 5) {
+      if (pick == 'O' && teamO < Math.floor((row * row) / 2)) {
         teamO++
         grid[i].push(pick)
       }
@@ -31,4 +31,6 @@ const ticTacToe = row => {
   return grid
 }
 
-console.log(ticTacToe(3))
+// console.log(ticTacToe(3))
+console.log(ticTacToe(5))
+// console.log(ticTacToe(7))
