@@ -1,12 +1,12 @@
-const kamus = [
-    ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'x'],
-    ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x', 'o']
-]
 
-function ticTacToe(kamus) {
+
+function ticTacToe() {
+    const kamus = [
+        ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'x'],
+        ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x', 'o']
+    ]
     
     let selectedPattern = kamus[Math.floor(Math.random() * 2)]
-    console.log(selectedPattern);
        
     let result = []
     
@@ -48,24 +48,18 @@ function winner(result) {
     for (let i=0; i<3; i++) {
         if (result[i][0] === result[i][1] && result[i][1] === result[i][2] && result[i][1] !== ' ') {
             return `${result[i][1]} WIN!`
-        }
-    }
-    for (let i=0; i<3; i++) {
-        if (result[0][i] === result[1][i] && result[2][i] === result[0][i] && result[0][i] !== ' ') {
+        } else if (result[0][i] === result[1][i] && result[2][i] === result[0][i] && result[0][i] !== ' ') {
             return `${result[i][1]} WIN!`
+        } else if (result[0][0] === result[1][1] && result[1][1] === result[2][2] && result[1][1] !== ' ') {
+            return `${result[1][1]} WIN!`
+        } else if (result[0][0] === result[1][1] && result[1][1] === result[2][2] && result[1][1] !== ' ') {
+            return `${result[1][1]} WIN!`
         }
     }
-    if (result[0][0] === result[1][1] && result[1][1] === result[2][2] && result[1][1] !== ' ') {
-        return `${result[1][1]} WIN!`
-    }
-    if (result[0][0] === result[1][1] && result[1][1] === result[2][2] && result[1][1] !== ' ') {
-        return `${result[1][1]} WIN!`
-    }
-        return ''
-    
+    return ''
 }
 
-console.log(ticTacToe(kamus));
+console.log(ticTacToe());
 
 //release 0 random xo
 //release 1 gantian isi x dan o, bukan x sampai 5 lalu o DAN HARUS random pengisian koordinatnya
