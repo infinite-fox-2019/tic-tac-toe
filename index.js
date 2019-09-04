@@ -35,3 +35,8 @@ return res
 
 console.log(tictactoe(3));
 
+//release 0 random xo
+//release 1 gantian isi x dan o, bukan x sampai 5 lalu o
+//release 2 tentukan pemenang
+//release 3 berhenti bila sudah ada pemenang, bukan full board
+//release 4 buat AI
