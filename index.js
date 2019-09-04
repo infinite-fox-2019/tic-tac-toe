@@ -30,3 +30,7 @@ function tic_tac_toe (){
 }
 
 console.log(tic_tac_toe())
+
+// ganti2an
+// tentukan kondisi menang
+//
